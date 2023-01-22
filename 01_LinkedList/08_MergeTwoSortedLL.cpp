@@ -3,6 +3,9 @@ Node *mergeTwoSortedLinkedLists(Node *head1, Node *head2)
   // 1st approach iterative approach 
   // make a new dummy node and then compare the value of head1 and head2 and connect the dummy node to the smaller value;
   
+
+  // There id a recursive approcah also 
+  
   Node *newHead = new Node(-1);
   Node *p3 = newHead;
 
