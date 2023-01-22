@@ -1,3 +1,6 @@
+// Approach
+// Divide the linked list into parts head to mid and mid to tail. sort them and call merge two sorted linked lists do this recursively 
+
 Node *mergeTwoSortedLL(Node *head1, Node *head2) {
   
   Node *newHead = new Node(-1);
