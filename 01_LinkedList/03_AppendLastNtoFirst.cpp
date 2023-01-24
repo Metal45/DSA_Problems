@@ -45,7 +45,6 @@ Node *appendLastNToFirst(Node *head, int n)
     // -> 2.  Two pointer approach
     // Traverse upto the point of n - 1 and then start the fast pointer and slow pointer from there positions 
     // slow will be on the new tail and fast will be on the last node of linked list and then rearrange the pointers
-
     // if(head == NULL || n==0){
     //     return head;
     // } 
@@ -53,6 +52,9 @@ Node *appendLastNToFirst(Node *head, int n)
     // Node *fast = head;
     // Node *slow = head;
     
+
+    // -> this type of traversing wil give first fast after n nodes from head and slow at n nodes from behind the linked list
+    // can be usefd if you want to find the adress of nth node from start and nth node from behind
     // for(int i  = 0; i < n; i++){
     //     fast = fast -> next;
     // }
