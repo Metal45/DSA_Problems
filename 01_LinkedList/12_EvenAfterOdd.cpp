@@ -21,16 +21,16 @@ Node *evenAfterOdd(Node *head)
                 Ehead = head;
                 Etail = head;
             }else{
-              Etail->next = head;
-              Etail = head;
+               Etail->next = head;
+               Etail = head;
             }
         }else{
             if(Ohead == NULL){
                 Ohead = head;
                 Otail = head;
             }else{ // Bina is else ke error kyud de rha hai
-              Otail->next = head;
-              Otail = head;
+               Otail->next = head;
+               Otail = head;
             }
         }
         head = head -> next;
