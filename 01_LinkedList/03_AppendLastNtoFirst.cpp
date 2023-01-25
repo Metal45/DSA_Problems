@@ -1,3 +1,5 @@
+// solve this again on leetcode this code on coding ninjas leaves some test cases
+
 int length(Node *head){
     if(head == NULL){
         return 0;
@@ -49,25 +51,25 @@ Node *appendLastNToFirst(Node *head, int n)
     //     return head;
     // } 
 
-    // Node *fast = head;
-    // Node *slow = head;
+    Node *fast = head;
+    Node *slow = head;
     
 
     // -> this type of traversing wil give first fast after n nodes from head and slow at n nodes from behind the linked list
     // can be usefd if you want to find the adress of nth node from start and nth node from behind
-    // for(int i  = 0; i < n; i++){
-    //     fast = fast -> next;
-    // }
+    for(int i  = 0; i < n; i++){
+        fast = fast -> next;
+    }
 
-    // while(fast -> next != NULL){
-    //     fast = fast -> next;
-    //     slow = slow -> next;
-    // }
+    while(fast -> next != NULL){
+        fast = fast -> next;
+        slow = slow -> next;
+    }
 
-    // fast -> next = head;
-    // head = slow -> next;
-    // slow -> next = NULL;
-    // return head;
+    fast -> next = head;
+    head = slow -> next;
+    slow -> next = NULL;
+    return head;
 
 
 

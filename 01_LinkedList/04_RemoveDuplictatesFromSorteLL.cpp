@@ -29,7 +29,8 @@ Node *removeDuplicates(Node *head)
 //             t1 = t2;
 //         }
 //         t2 = t2 -> next;
-        
+         
+//         Do not forget ending the linked list with NULL
 //         if(t2 == NULL){
 //             t1 -> next = NULL;
 //         }
