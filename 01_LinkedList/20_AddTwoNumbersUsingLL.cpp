@@ -1,4 +1,5 @@
      
+    // discuss this approach with someone how can you make it work
     // approach to solve you have to add the numbers in the linked list which is started from the last digits so you will have to reverse the linked iists 
     // but these are already reversed so no need to do that then just add the value of nodes and save the value of carry such that you can use it in the next addition
      ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
@@ -38,7 +39,7 @@
 
 
 
-// discuss this approach with someone how can you make it work
+
         // int num1 = 0, num2 = 0, i = 0, ans, digit;
 
         // ListNode* temp = l1;
