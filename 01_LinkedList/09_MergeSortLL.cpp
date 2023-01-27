@@ -50,6 +50,7 @@ Node *mergeSort(Node *head){
 
     Node *mid = midNode(head);
     Node *h1 = head;
+    // You do a mistake here find mid accurately by taking fast as head -> next not head else you will find the mid not the previous of mid
     Node *h2 = mid -> next;
     mid->next = NULL;
     
