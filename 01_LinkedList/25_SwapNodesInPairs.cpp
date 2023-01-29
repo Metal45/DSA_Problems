@@ -1,4 +1,5 @@
 ListNode* swapPairs(ListNode* head) {
+        // first edge case of swappig nodes that is head and next node can be managed by creating a dummy node so prev is never NULL 
         //1st Approach using dummyNode so to eliminate the first case of swapping the first two nodes so prev != NULL
         if(head == NULL || head -> next == NULL){
             return head;

@@ -80,7 +80,7 @@
         // return true;
 
 
-        // // -> 3rd approach Two pointer approach Tc O(n2) Sc O(1)
+        // // -> 3rd approach Tc O(n2) Sc O(1)
         // // start from head and then traverse to last node and compare it and then move to second and than traverse till second last node 
         // // and compare it do this until you reach the middle node
 
