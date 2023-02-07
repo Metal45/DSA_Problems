@@ -1,3 +1,7 @@
+// TC O(N) SC 0(K) K = number of lists to be flattened
+// recursively merge two lists using merge two sorted lists
+
+
 Node *merge2Lists(Node *h1, Node *h2){
     if(h1 == NULL){
         return h2;
