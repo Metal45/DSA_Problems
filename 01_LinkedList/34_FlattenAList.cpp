@@ -63,7 +63,8 @@ Node *merge2Lists(Node *h1, Node *h2){
 
 Node *flatten(Node *root)
 {
-   // TC O(N)     SC 0(K) K = number of lists to be flattened
+   // TC O(N) SC 0(K) K = number of lists to be flattened
+   
    // base case
    if(root == NULL){
        return root;
