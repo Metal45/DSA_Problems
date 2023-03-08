@@ -25,3 +25,58 @@
 
 // to convert integer to string 
 // stoi(), atoi() but these sometimes give int overflow 
+
+// maximum element in a vector
+// *max_element(v.begin(), v.end());
+
+map<int, int> freq;
+        for(int i = 0; i < nums.size(); i++){
+            freq[nums[i]]++;
+        }
+        int count = 0;
+        for(auto i: freq){
+            if(freq.find(i.first + k) != freq.end()){
+                i.sec
+                ans++;
+            }
+        }
+        return 0;
+
+        #include<bits/stdc++.h>
+
+        int t;
+        cin >> t;
+        while(t--){
+            
+        }
+
+
+
+
+
+        
+        // Brute Force -> Consider Each and every pair using two loops TC O(N2) SC O(1)
+
+        // Better Approach -> HashMaps TC O(N) SC O(N) 
+        map<int, int> freq;
+        for(int i = 0; i < nums.size(); i++){
+            freq[nums[i]]++;
+        }
+        int ans = 0;
+    
+        if(k != 0){
+            for(auto i: freq){
+                if(freq.find(i.first + k) != freq.end()){
+                    i.second = 0;
+                    ans++;
+                }
+            }
+        }else{
+            for(auto i : freq){
+                if(i.second >= 2){
+                    ans++;
+                }
+            }
+        }
+       
+        return ans;

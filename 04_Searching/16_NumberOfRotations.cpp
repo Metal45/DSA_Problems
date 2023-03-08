@@ -1,7 +1,7 @@
 // Find how many times a sorted array has been rotated
 
 // Efficient Approach TC O(LogN) SC O(1) -> Pivot Index is same as the number of times a array has been rotated , the only change is you come out of loop in two cases. Either a single element or
-// the array has been rotated n - 1 times that is the it has become the origingal array for which the ans is the first element 
+// the array has been rotated n - 1 times inn whihc it has become the original array for both the cases ans is the first element
 
 int findKRotation(int nums[], int n) {
     // Approach -> TC O(LogN) SC O(1)
