@@ -26,6 +26,13 @@
 // to convert integer to string 
 // stoi(), atoi() but these sometimes give int overflow 
 
+
+// to input a string with spaces 
+// getline(cin , s);
+
+// to check if the current character is an alphabet
+// isalpha(s[i])
+
 // maximum element in a vector
 // *max_element(v.begin(), v.end());
 
