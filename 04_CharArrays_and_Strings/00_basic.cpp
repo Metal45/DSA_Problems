@@ -30,8 +30,14 @@
 // to input a string with spaces 
 // getline(cin , s);
 
-// to check if the current character is an alphabet
+// to check if the character is an alphabet
 // isalpha(s[i])
+// to check if the character is a digit
+// isdigit(s[i])
+
+// to convert a c++ string to char pointer 
+// s.c_str() 
+// atoi does not input string but a char pointer
 
 // maximum element in a vector
 // *max_element(v.begin(), v.end());
