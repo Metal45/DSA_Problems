@@ -9,6 +9,7 @@
         "limits": "cpp",
         "semaphore": "cpp",
         "valarray": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp"
     }
 }

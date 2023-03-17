@@ -1,8 +1,10 @@
+// 
+
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
-// check iterative method
+
 
 void helpsub(string str, string output, int i){
     if(i >= str.length()){

@@ -1,3 +1,5 @@
+// the edge case where you find the difference in the last and first hours by adding 1440
+
 int findMinDifference(vector<string>& timePoints) {
     vector<int> minute;
     
