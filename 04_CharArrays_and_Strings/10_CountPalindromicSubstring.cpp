@@ -32,4 +32,59 @@ public:
         }
         return count;
     }
+
+
+    
+    // // One way to do this question TC O(N2) SC O(N) 
+    // // store all the possible substrings and then check for each 
+    // void substring(vector<string> &output, string s){
+    //     for(int i = 0; i < s.size(); i++){
+    //         string ss = "";
+    //         for(int j = i; j < s.size(); j++){
+    //             ss += s[j];
+    //             output.push_back(ss);
+    //         }
+    //     }
+    // }
+
+    // void substring2(vector<string> &output, string s){
+    //     for(int i = 0; i < s.size(); i++){
+    //         for(int j = i, k = 1; j < s.size(); j++, k++){
+    //             string ss = s.substr(i,k);
+    //             output.push_back(ss);
+    //         }
+    //     }
+    // }
+
+    // bool isPalindrome(string S){
+    //     if(S.size() == 0 || S.size() == 1){
+    //         return true;
+    //     }
+
+    //     int s = 0, e = S.size() - 1;
+
+    //     while(s <= e){
+    //         if(S[s] != S[e]){
+    //             return false;
+    //         }
+    //         s++;
+    //         e--;
+    //     }
+
+    //     return true;
+    // }
+
+    // int countSubstrings(string s){
+    //     vector<string> ans;
+    //     substring2(ans, s);
+
+    //     int count = 0;
+    //     for(int i = 0; i < ans.size(); i++){
+    //         if(isPalindrome(ans[i]) == true){
+    //             count++;
+    //         }
+    //     }
+
+    //     return count;
+    // }
 };

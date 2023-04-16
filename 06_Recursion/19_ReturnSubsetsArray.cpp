@@ -7,10 +7,11 @@ void helpsub(vector<int>&nums,vector<int>subset,int i) {
         ans.push_back(subset);
         return;
     }
+    
     subset.push_back(nums[i]);
     helpsub(nums,subset,i+1);
-
     subset.pop_back();
+
     helpsub(nums,subset,i+1);
 }
 

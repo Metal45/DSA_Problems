@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// check how to do it without using extra space 
 void merge2(int *arr, int s, int e){
     int mid = s + (e - s)/2;
 
@@ -69,7 +70,7 @@ void merge(int *arr, int s, int e){
         arr[mainIndex++] = left[leftIndex++];
     }
 
-    while(leftIndex < l1){
+    while(rightIndex < l2){
         arr[mainIndex++] = right[rightIndex++];
     }
 
@@ -86,7 +87,7 @@ void mergeSort(int arr[], int s, int e){
     mergeSort(arr, s, mid);
     mergeSort(arr, mid + 1, e);
 
-    merge2(arr , s, e);
+    merge(arr , s, e);
 };
 
 int main(){

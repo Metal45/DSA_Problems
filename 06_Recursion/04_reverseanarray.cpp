@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// TC O(N/2) SC O(N/2)
+
 void reverse(int arr[], int n){
     if(n <= 0){
         return;
