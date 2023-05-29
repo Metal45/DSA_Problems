@@ -1,0 +1,26 @@
+It is a non linear hierarchial data structure 
+
+
+Terminology:
+
+1. node -> all memebers (unit) are nodes
+
+2. root -> topmost node 
+
+3. parent -> one level above from which the node is descended 
+
+4. child -> one level below 
+
+5. ancestor -> all parents above current level are ancestors
+
+6. descendant -> all children below current level are descendants
+
+7. sibling -> children of same parents 
+
+8. leaf -> node with 0 children 
+
+
+Questions ->
+ 
+MCQ -> Formula Based Questions / Easy
+Online Test / Interview -> Classical Questions (95%)
