@@ -46,7 +46,7 @@ public:
             items.push_back(i.second);
         }
 
-        // optimisation (to reduce complexity)
+        // optimisation (to reduce complexity) // will help to find false answer faster 
         // to ensure the greatest quantity is checked first so if it fails we do not have to check the rest
         sort(quantity.begin(), quantity.end(), greater<int> ());
 
