@@ -1,0 +1,10 @@
+A fifo first in first out data structure
+
+insertion -> rear
+removal -> front
+
+
+mostly used ->
+1. graphs
+2. sliding window
+3. traversals
