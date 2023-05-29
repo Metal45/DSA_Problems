@@ -1,0 +1,11 @@
+Hashmaps ->
+
+1. A data stucture that stores data in key value pair type data
+
+Two kinds of maps -> 
+    1. ordered maps -> O(LogN)
+    2. unordered maps -> O(1)
+
+
+Important Question -> Implement a data structue where you can do searching, insertion, deletion and random in O(1)
+
