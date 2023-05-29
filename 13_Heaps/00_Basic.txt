@@ -1,0 +1,90 @@
+To study -> Time complexities of all functions
+Dry Run of all algorithms and code it again
+
+
+
+
+1. what is a Heap?
+-> A data structure which is a complete binary tree and holds a heap property
+
+
+
+2. what is a complete binary tree and heap property?
+-> Complete binary tree - All levels are completely filled except the last level and filling is done from left to right. 
+-> heap property - every node is either greater/lesser than its child nodes.
+
+
+
+
+3. Array Representation
+
+For writing array Representation using tree form of heap start from left choose node and connect its children 
+
+for 1 based indexing -> 
+[-1, 100, 50, 60, 20, 40, 45, 55, 5, 10]
+
+parent node -> i
+lchild -> 2i
+rchild -> 2i + 1
+
+child -> i
+parent -> i/2;
+
+
+for 0 based indexing -> 
+[-1, 100, 50, 60, 20, 40, 45, 55, 5, 10]
+
+parent node -> i
+lchild -> 2i + 1
+rchild -> 2i + 2
+
+child -> i 
+parent -> (i - 1)/2;
+
+
+
+
+4. Insertion in a binary heap O(LogN)
+
+A new node is always inserted at the last of the array or at the last level in tree
+and compare and swap it until you find the right location for the inseted node
+
+A binary heap has logN levels and you compare the node in every level to check if the 
+property of heap is maintained so the worst case time complexity is O(LogN)
+N nodes.
+
+
+
+
+5. Deletion in a binary Heap O(LogN)
+
+We can only delete the root node in an heap.
+Replace the last node's value from root node and decrease the size of the heap by 1
+Place all the nodes at their correct positons.
+
+A binary heap has logN levels and you compare the node in every level to check if the 
+property of heap is maintained after swapping it with last node (O(1)) so the worst case time complexity is O(LogN)
+N nodes.
+
+Placing it on the right psotion -> (Heapify)
+you take the root node and compare it with the left and right child node and swap it with the largest value of them until
+the node is the largest value.
+
+
+
+6. Leaf Nodes -> In a binary tree of n nodes all nodes from (n/2 + 1) -> (n) all are leaf nodes
+
+7. Build Heap Function -> O(N)
+In a heap there is no need to heapify the leaf nodes as they are already at there right locationns
+You need to heapify all other leaf nodes for making a heap out of that array.
+
+8. Heap Sort -> O(NlogN)
+You can sort an array by converting it into an heap, by doing that the root node will always be maximum
+
+steps to sort the array:
+1. build heap from the array -> O(N)
+2. swap root with last node -> O(1)
+3. decrease the size of the heap and heapify first node -> O(LogN)
+4. repeat it until size of heap is 1 -> O(N)
+
+doing so the last element in the array will always be the root which is largest so it will be sorted in ascending order
