@@ -93,7 +93,8 @@ void heapify(int *arr, int heapsize, int i){
 }
 
 void BuildHeap(int *arr, int size){
-    for(int i = size/2; i > 0; i--){
+    for(int i = size/2; i > 0; i--){ // n/2
+        // logn
         heapify(arr, size, i);
     }
 }
