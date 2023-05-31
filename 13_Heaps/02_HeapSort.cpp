@@ -1,3 +1,5 @@
+// isme aur quick sort me galti karte hai ache se karna
+
 //  Heap Sort -> O(NlogN)
 // You can sort an array by converting it into an heap, by doing that the root node will always be maximum
 
