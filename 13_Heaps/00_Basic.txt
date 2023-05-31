@@ -66,19 +66,23 @@ A binary heap has logN levels and you compare the node in every level to check i
 property of heap is maintained after swapping it with last node (O(1)) so the worst case time complexity is O(LogN)
 N nodes.
 
-Placing it on the right psotion -> (Heapify)
+
+6. Placing it on the right psotion -> (Heapify)  -> O(logN)
 you take the root node and compare it with the left and right child node and swap it with the largest value of them until
 the node is the largest value.
+A binary heap has logN levels and you compare the node in every level to check if the 
+property of heap (root > max(left, right)) is maintained so the worst case time complexity is O(LogN)
+N nodes.
 
 
 
-6. Leaf Nodes -> In a binary tree of n nodes all nodes from (n/2 + 1) -> (n) all are leaf nodes
+7. Leaf Nodes -> In a binary tree of n nodes all nodes from (n/2 + 1) -> (n) all are leaf nodes
 
-7. Build Heap Function -> O(N)
+8. Build Heap Function -> O(N)
 In a heap there is no need to heapify the leaf nodes as they are already at there right locationns
 You need to heapify all other leaf nodes for making a heap out of that array.
 
-8. Heap Sort -> O(NlogN)
+9. Heap Sort -> O(NlogN)
 You can sort an array by converting it into an heap, by doing that the root node will always be maximum
 
 steps to sort the array:
