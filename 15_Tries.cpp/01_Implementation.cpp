@@ -99,6 +99,7 @@ bool searchWord(TrieNode *root, string word){
 // We do not remove the nodes from the trie we just make isTerminal or end of word false for the given word.
 // 1. Search for the word and go till the last node / character of the word 
 // 2. Mark the isTerminal or End of Word false for the node
+
 void deleteWord(TrieNode *root, string word){
     if(word.size() == 0){
         root -> isTerminal = false;
