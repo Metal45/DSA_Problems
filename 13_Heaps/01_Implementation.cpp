@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 class Heap{
@@ -120,23 +120,23 @@ int main(){
     //     cout << H1.arr[i] << " ";
     // }
 
-    int n;
-    cin >> n;
-    int *arr2 = new int[n];
+    // int n;
+    // cin >> n;
+    // int *arr2 = new int[n];
 
-    for(int i = 0; i < n; i++){
-        cin >> arr2[i];
-    }
+    // for(int i = 0; i < n; i++){
+    //     cin >> arr2[i];
+    // }
     
-    for(int i = 1; i < n; i++){
-        cout << arr2[i] << " ";
-    }
+    // for(int i = 1; i < n; i++){
+    //     cout << arr2[i] << " ";
+    // }
 
-    cout << endl;
+    // cout << endl;
 
-    BuildHeap(arr2, n);
+    // BuildHeap(arr2, n);
 
-    for(int i = 1; i < n; i++){
-        cout << arr2[i] << " ";
-    }
+    // for(int i = 1; i < n; i++){
+    //     cout << arr2[i] << " ";
+    // }
 }
