@@ -1,3 +1,9 @@
+// Find the maximum depth of the binary tree
+
+
+// Approach -> 
+// The maximum depth of binary tree is -> 1 + maximum of(leftheight, rightheight)
+
 class Solution {
 public:
     int solve(TreeNode *root){
