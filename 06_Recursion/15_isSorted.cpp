@@ -25,7 +25,7 @@ bool isSorted2(int arr[], int n, int i){
         return false;
     }
 
-    return isSorted2(arr, n, i);
+    return isSorted2(arr, n, i + 1);
 }
 
 bool isSorted3(int arr[], int n){
@@ -52,5 +52,5 @@ int main(){
         cin >> arr[i];
     }
     
-    cout << isSorted3(arr, n) << endl; 
+    cout << isSorted2(arr, n, 0) << endl; 
 }
