@@ -1,0 +1,57 @@
+
+int top=-1;
+int arr[STACK_MAX_SIZE];
+void push(int x){
+if(top==STACK_MAX_SIZE-1){
+printf("Stack is overflow.\n");
+return ;
+}
+else{
+top++;
+arr[top]=x;
+printf("Successfully pushed.\n");
+
+}
+}
+void pop(){
+if(top<0){
+printf("Stack is underflow.\n");
+return ;
+}
+else{
+printf("Popped value = %d\n",arr[top]);
+top--;
+}
+}
+void display(){
+if(top<0){
+printf("Stack is empty.\n");
+return ;
+}
+else{
+printf("Elements of the stack are : ");
+for(int i=top;i>=0;i--){
+printf("%d ",arr[i]);
+
+}
+printf("\n");
+}
+}
+void isEmpty(){
+if(top<0){
+printf("Stack is empty.\n");
+return ;
+}
+else{
+printf("Stack is not empty.\n");
+}
+}
+void peek(){
+if(top<0){
+printf("Stack is underflow.\n");
+return ;
+}
+else{
+printf("Peek value = %d\n",arr[top]);
+}
+}
