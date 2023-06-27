@@ -1,0 +1,26 @@
+1. What is a Binary Search Tree?
+
+A Binary Search Tree is a non linear data structure where the values in left subtree is less than the parent node and the values in the right subtree is greater than the
+parent node, the left subtree and the right subtree is also a BST.
+
+2. Insertion in BST:
+
+
+3. Deletion in BST:
+
+There can be 4 possibilites while deleting a node from BST
+a. The node is a leaf node -> delete the node 
+b. Deleting the node with a single child -> delete the node and connect the child to the parent of the node deleted
+
+
+4. Searching a node in BST:
+
+TimeComplexity of searching an element in an average case O(H) that is log(N)
+similarly for inserting an element in BST 
+
+It can be O(N) also in worst case (skewed BST)
+
+
+Properties:
+Inorder traversal of a BST is sorted
+
