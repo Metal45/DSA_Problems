@@ -1,57 +1,70 @@
-
+#include <ctype.h>
+#include <stdio.h>
+#define STACK_MAX_SIZE 20
+char stack[STACK_MAX_SIZE];
 int top=-1;
-int arr[STACK_MAX_SIZE];
-void push(int x){
-if(top==STACK_MAX_SIZE-1){
+int isEmpty() { 
+if(top<0)
+return 1;
+else
+return 0;
+}
+void push(int x) { 
+if(top==STACK_MAX_SIZE-1)
+{ 
 printf("Stack is overflow.\n");
-return ;
-}
-else{
-top++;
-arr[top]=x;
-printf("Successfully pushed.\n");
-
+}else
+{ 
+stack[++top]=x;
 }
 }
-void pop(){
-if(top<0){
-printf("Stack is underflow.\n");
-return ;
+int pop() { 
+if(top<0)
+{ 
+printf("Stack is empty'\n");
 }
-else{
-printf("Popped value = %d\n",arr[top]);
-top--;
+else
+return stack[top--];
 }
+void evaluatePostfix(char * e) { 
+int a,s;int d=0,o=0;
+while(*e!='\0')
+{ 
+if(isdigit(*e))
+{ d++;
+a=*e-48;
+push(a);
 }
-void display(){
-if(top<0){
-printf("Stack is empty.\n");
-return ;
+else
+{ 
+int n1,n2;
+n2=pop();
+n1=pop();
+switch(*e)
+{ 
+case '+': s=n1+n2; o++;
+break;
+case '-': s=n1-n2;o++;
+break;
+case '*': s= n1*n2; o++;
+break;
+case '/': s=n1/n2; o++;
+break;
 }
-else{
-printf("Elements of the stack are : ");
-for(int i=top;i>=0;i--){
-printf("%d ",arr[i]);
-
+push(s);
 }
-printf("\n");
+e++;}
+if(d-o==1)
+printf("Result : %d\n",pop());
+else
+printf("Invalid postfix expression.\n");
 }
-}
-void isEmpty(){
-if(top<0){
-printf("Stack is empty.\n");
-return ;
-}
-else{
-printf("Stack is not empty.\n");
-}
-}
-void peek(){
-if(top<0){
-printf("Stack is underflow.\n");
-return ;
-}
-else{
-printf("Peek value = %d\n",arr[top]);
-}
+int main() { 
+char exp[20];
+char *e, x;
+printf("Enter the postfix expression : ");
+scanf("%s",exp);
+e = exp;
+evaluatePostfix(e);
+return 0;
 }
