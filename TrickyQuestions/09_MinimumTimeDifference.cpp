@@ -30,3 +30,4 @@ int findMinDifference(vector<string>& timePoints) {
     return minDiff;
 }
 };
+
