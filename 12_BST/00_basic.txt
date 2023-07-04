@@ -24,3 +24,7 @@ It can be O(N) also in worst case (skewed BST)
 Properties:
 Inorder traversal of a BST is sorted
 
+
+
+// TIP : while solving BST questions keep the inorder property in mind 
+

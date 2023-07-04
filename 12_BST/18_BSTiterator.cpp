@@ -38,9 +38,9 @@ public:
 
 
 // Approach 2 -> TC O(1) (next and hasnext, avg) SC O(h)
-// 3 steps in order -> LEFT NODE RIGHT
-// We won't save inorder in one time we will store partially -> First we will store left (1st step)
-// when you pop Node (2nd Step) and then you go right (3rd step) and store till the leftmost node again (1st step) -> (It's like we do recursion in step)
+// 3 steps in Inorder Traversal -> LEFT NODE RIGHT
+// We won't save inorder in one time we will store partially -> First we will store nodes till the leftmost node (1st step)
+// when you pop top Node (2nd Step) and then you go to right of the popped node (3rd step) and store till the leftmost node again (1st step) -> (It's like we do recursion in step)
 
 // 1. Here to reduce the space complexity we will save partial inorder in stack
 // 2. first we will store every node till the extreme left node 
