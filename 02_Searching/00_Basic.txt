@@ -1,0 +1,6 @@
+How To identify if a question is of binary search->
+
+Three kinds of qurestions are asked in Binary Search (Pattern Search)
+a. classic questions covered till now
+b. if the ans of the problem exists in a search space(sorted search space), predicate function 
+c. quesitons on index observation
