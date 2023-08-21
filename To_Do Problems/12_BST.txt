@@ -1,0 +1,7 @@
+BST
+_____________________________________________________________________________
+
+BST
+BST -> Sorted DLL
+Sorted DLL -> BST
+Merge BST to make one 

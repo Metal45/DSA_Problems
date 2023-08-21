@@ -1,0 +1,8 @@
+HEAPS:
+___________________________________________________________________________
+what is time complexity of insetion so if you insert n elemnst to to nlogn hogi ya heap build kiya us kisab se o(n) hogi?
+Learn more about on priortiy queue on cpp reference 
+implementation of priority queue	  
+heapify cpp reference 		  
+heapify function   			
+how is heap build in o(n) time and not in o(logn)

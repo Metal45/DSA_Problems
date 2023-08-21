@@ -1,0 +1,30 @@
+Count number of beautiful subarrays - contest 
+Recursion Questions-
+Order:
+
+Print Subsequence of string
+Return Subsequences of string 
+Print Subsets of Array
+Return Subsets of Array
+Total Subsequences of string 
+Total Subsets of an Array
+Combination Sum 1
+Combination Sum 2
+Return KeyPad Combination 
+Print KeyPad Combination 
+Subset Sum 1 
+Subset Sum 2 
+Return Subset Sum to K
+Print Subset Sum to K 
+Return all Codes
+Print all Codes
+Return Permutations 
+Print Permutations
+Inversion Count
+Merge sort without using extra space (in place merge sort)
+Knight Tour Config
+Number of Beautiful Subsets
+
+
+
+
