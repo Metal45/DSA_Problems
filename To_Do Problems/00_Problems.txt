@@ -1,0 +1,44 @@
+These are the questions that I have to do or Revise -> 
+
+Contest:
+1. Slinding Subarray is Beautiful 
+2. Minimum No. of operations to make subarray 1 
+
+Recursion:
+1. reverse pairs
+2. merge two sorted arrays without extra space (all methods)
+3. Return KeyPad Combination 
+4. Print KeyPad Combination 
+5. Subset Sum 1 
+6. Subset Sum 2 
+7. Return Subset Sum to K
+8. Print Subset Sum to K 
+9. Return all Codes
+10. Print all Codes
+11. Knight Tour Config
+12. Number of Beautiful Subsets
+13. Count number of beautiful subarrays 
+
+
+Graphs:
+1. largest color value in a directed graph
+2. clone graph
+
+
+DP:
+1. longest plaindromic subsequence
+2. maximum value of k coins from n piles
+3. Number of Ways to Form a Target String Given a Dictionary
+
+BST:
+1. Validate BST
+2. LCA of a BST
+
+
+Binary Search:
+1. EKO SPOJ
+2. PRATA SPOJ
+
+
+
+
