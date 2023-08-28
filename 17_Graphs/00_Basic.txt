@@ -1,0 +1,1 @@
+BFS ke dwara jab kisi node ko pehli baar visit kiya jata hai wahi uska shortest path hota hai 
