@@ -131,7 +131,7 @@ int main(){
 
     dis[src] = 0;
 
-    Dijkstra(src, G.adj, dis);
-    Dijkstra2(src, G.adj, dis);
+    DijkstraUsingPQ(src, G.adj, dis);
+    DijkstraUsingSet(src, G.adj, dis);
 }
 
