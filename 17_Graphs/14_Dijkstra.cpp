@@ -73,7 +73,7 @@ class Graph{
 
 
 // USING PRIORITY QUEUE
-void DijkstraUsingSet(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> &dis){
+void DijkstraUsingSet(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> dis){
     set<pair<int, int>> nodes;
     nodes.insert({0, src});
 
@@ -104,27 +104,29 @@ void DijkstraUsingSet(int src, unordered_map<int, list<pair<int, int>>> &adj, ve
 
 
 // USING PRIORITY QUEUE 
-void DijkstraUsingPQ(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> &dis){
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> minHeap;
-    minHeap.push({0, 0});
-    dis[0] = 0;
-
-    while(!minHeap.empty()){
-        auto p = minHeap.top();
-        int node = p.first;
-        int nodeDis = p.second;
-        minHeap.pop();
-
-        for(auto nbr : adj[node]){
-            if(nodeDis + nbr.second < dis[nbr.first]){
-                dis[nbr.first] = nodeDis + nbr.second;
-                minHeap.push({dis[nbr.first], nbr.first});
+void DijkstraUsingPQ(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> dist){
+    dist[src] = 0;
+    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
+    pq.push({0,src});
+    
+    while(!pq.empty()){
+        int dis = pq.top().first;
+        int node = pq.top().second;
+        pq.pop();
+        
+        for(auto x:adj[node]){
+            int adj_node = x.first;
+            int wt = x.second;
+            
+            if(dist[adj_node] > dis+wt){
+                dist[adj_node] = dis+wt;
+                pq.push({dist[adj_node],adj_node});
             }
         }
     }
 
-    for(int i = 1; i < dis.size(); i++){
-        cout << "Dis from " << src << " to " << i << " : " << dis[i] << endl; 
+    for(int i = 1; i < dist.size(); i++){
+        cout << "Dis from " << src << " to " << i << " : " << dist[i] << endl; 
     }
 }
 
