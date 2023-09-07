@@ -1,31 +1,49 @@
-// It can not be applied on the graphs with negative weight and negative weight cycles 
+// What does it state
+// Dijkstra Algo is used for finding the shortest parth between the source to every other vertex in the graph, provided the graph does not contain 
+// negative edge weights and negative cycles. 
 
+// Working of Dijkstra
 // Dijkstra can be implemented using queue, priority_queue, set
+// Dijsktra starts from the soruce node marking its dis[S] = 0 and then visits all the neigbour nodes and if the dis to the neighbour node is less than
+// the current dis of that node then it gets updated and pushed into the data structure beinng used this process is repeated unitl all the nodes are visited (if using a visited array)
+// or the data structure is not empty.
+// Conventionally it also maintains a visited array and only visit a node once as the it is already going thorugh the shortest path but you can also 
+// do it without the visited array as one node (if all the edge weights are positive) only gets pushed in the heap or set once (you can check). But it is good
+// to use visited array else you algo will also run for negative weights and cycles.
 
-// why does it work? 
-// ?
-
-// why not queue?
+// Why not queue?
 // using queue is the brute force apporach, that is going down every possible path and firuring out the shortest. Whereas you can
 // be greedy and choose to go along the minimum path.
 
-
-// why PQ or set?
+// Why PQ or set?
 // pq or set are used to fetch the next minimum distance node
 
-
-// which one is better?
+// Which is better Set or Priority Queue?
 // you can not point out and say which is better as both of them have roughly the same complexity. but set can erase the current 
 // irrelevant calls so it saves some iterations which heap can not but at the same time it takes logarithmic time to do so. So it depends
 // upon the graph that which would be better for it. Heap or Set.
 
-
-// TC of each with set, PQ
+// Derivation of Time Complexity of Dijkstras Algorithm 
 // set, PQ -> ElogV
 
+// WHERE DOES IT FAIL? -> It can not be applied on the graphs with negative weight and negative weight cycles 
+// If there exists a negative cycle you will get caught in an infinite loop as after each cycle there would be a shorter path available and
+// you will never get out of the priority queue or set
+
+// Why does it fail for Negative Edges?
+// In the algo whenever you take the element out of queue or set it does not enter the data structure again becuase the shortest path to that node from 
+// the source has already been updated but this is only true if all the edge weights in the graph are positive as whenever you will try to revisit this 
+// particular node it will always be thorugh a larger path as something will be added to the already existing shorter path so it will never be pushed again
+// That is why we does not need to use a visiting array but if we use a visiting array.
+// Now for negative edge weights even after pulling the node put of the data structure we can encounter some negative edge weight that will decrease the current 
+// shortest path and will ask to push it back again in data structure but we will not do so as it is against the algorithm. So to see the Dijkstra failing 
+// for negative edge weights we will have to use a visiting array else it will give the correct answer for neg weights also.
+
+// Why does it fail for negative cycles?
+// In the negative cycle next after every loop their will be a shorter distance available for the nodes which will not let you come out of infinite loop
+// as the data structure will never be empty. So it will give TLE.
 
 
-// using set
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -54,7 +72,7 @@ class Graph{
 };
 
 
-// using set
+// USING PRIORITY QUEUE
 void DijkstraUsingSet(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> &dis){
     set<pair<int, int>> nodes;
     nodes.insert({0, src});
@@ -84,7 +102,8 @@ void DijkstraUsingSet(int src, unordered_map<int, list<pair<int, int>>> &adj, ve
     }
 }
 
-// using priority queue
+
+// USING PRIORITY QUEUE 
 void DijkstraUsingPQ(int src, unordered_map<int, list<pair<int, int>>> &adj, vector<int> &dis){
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> minHeap;
     minHeap.push({0, 0});

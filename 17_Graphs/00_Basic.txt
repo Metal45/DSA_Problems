@@ -1,1 +1,2 @@
-BFS ke dwara jab kisi node ko pehli baar visit kiya jata hai wahi uska shortest path hota hai 
+1. BFS ke dwara jab kisi node ko pehli baar visit kiya jata hai wahi uska shortest path hota hai 
+2. Agar graphs me dijkstra nahi aati hai to rejection tai hai 
