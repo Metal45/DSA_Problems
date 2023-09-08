@@ -1,6 +1,8 @@
 // What does it state?
+
 // How does it work?
-// Why BellmanFord?
+
+// Why BellmanFord when dijsktra?
 
 #include <bits/stdc++.h>
 using namespace std;
