@@ -1,3 +1,11 @@
+// A disjoint-set data structure is defined as one that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.
+
+// A union-find algorithm is an algorithm that performs two useful operations on such a data structure:
+
+// Find:(findParent) Determine which subset a particular element is in. This can determine if two elements are in the same subset.
+// Union (unionbyRank/unionbySize): Join two subsets into a single subset. Here first we have to check if the two subsets belong to the same set. If not, then we cannot perform union. 
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
