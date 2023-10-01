@@ -1,0 +1,35 @@
+1. What is DP? ->
+    A programming technique. The idea is to simply store the results of subproblems, so that we do not have to re-compute 
+    them when needed later. This simple optimization reduces time complexities from exponential to polynomial.
+
+2. Principle of dp -> Those who forget the past are condemned to repeat it
+
+
+3. Phases to solve a question of DP -> 
+
+    1. Top Down / Memoization 
+       Known as the “top-down” dynamic programming, usually the problem is solved in the direction of the main problem to the base cases
+
+    2. Bottom Up / Tabulization
+       Known as the “bottom-up” dynamic programming, usually the problem is solved in the direction of solving the base cases to the main problem
+
+    3. Space Optimisation 
+
+
+4. When to apply DP -> 
+
+    The problem should have -
+    1. Overlapping subproblems
+    2. Optimal substructure
+
+
+5. Steps for Top Down Approach
+    1. Find the size of the dp array and initialize it
+    2. Store the ans in the dp array
+    3. Check if the answer already exists
+
+
+6. Steps for Bottom Up Approach
+    1. Find the size of the dp array and initialize it
+    2. Observe the base case and make relevant changes 
+    3. Check top down me n kaise change ho rha  and iterate through subproblems and fill the table
