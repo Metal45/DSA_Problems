@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Brute Force -> Go throught all the edges one by one and count the number of components after removing each edge. The edges leading to the increase
+// int the number of components are bridges.
+
+
+//Approach -> Tarjan's Algorithm
+
 class Solution {
 public:
 
@@ -9,8 +15,11 @@ public:
         disc[src] = low[src] = timer++;
 
         for(auto nbr : adj[src]){
-            if(nbr == parent) continue;
-            else if(!visited[nbr]){
+            if(nbr == parent) continue; // case 1 : nbr is parent -> ignore
+
+            else if(!visited[nbr]){ // case 2 : simple nbr
+                // -> low[src] gets updated in order to check if their exists another way to reach that node in less time
+                // checing if src -> nbr is a bridge by comparing low[src] and arr[nbr]
                 dfs(nbr, src, timer, disc, low, adj, visited, result);
                 low[src] = min(low[src], low[nbr]);
                 if(low[nbr] > disc[src]){
@@ -19,12 +28,14 @@ public:
                     temp.push_back(nbr);
                     result.push_back(temp);
                 };
-            }else{
+            }
+            else{
+                // back edge -> (it can never be a bridge) case 3 : path possible but visited
                 low[src] = min(low[src], disc[nbr]);
             }
         }
     }
-    
+
 
     vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
         int timer = 0, parent = -1;
