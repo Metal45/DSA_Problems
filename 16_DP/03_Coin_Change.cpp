@@ -5,6 +5,8 @@ using namespace std;
 class Solution {
 public: 
     // memoization
+    // O(Amount) as u are calculating ans for every amount once
+    // space -> Stack space O(n), dpsize o(n)
     int minCoinsMemoization(vector<int> &arr, int target, vector<int> &dp){
         if(target == 0){
             return 0;
@@ -31,7 +33,10 @@ public:
         return dp[target];
     }
 
+
     // Tabular Approach ->
+    // O(Amount) as u are calculating ans for every amount once
+    // space -> Stack space O(n), dpsize o(n)
 
     // In memoization we reduced amount/ target to 0
     // that means we went from n -> 0 top to down
@@ -75,4 +80,6 @@ public:
             return -1;
         }
     }
+
+    // No further space optimisation possible
 };
