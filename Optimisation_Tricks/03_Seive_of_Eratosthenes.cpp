@@ -7,7 +7,7 @@ using namespace std;
 // all the element left unmarked are prime numbers
 
 void solve(int n, vector<bool> &isPrime){
-    for(int i = 2; i <= i * i; i++){
+    for(int i = 2; i <= n; i++){
         if(!isPrime[i]){
             for(int j = i*i; j <= n; j+= i){
                 isPrime[j] = true;
