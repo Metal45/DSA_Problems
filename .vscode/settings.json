@@ -22,7 +22,7 @@
         "initializer_list": "cpp",
         "ranges": "cpp",
         "span": "cpp",
-
+        "numeric": "cpp"
     }
 
 }
