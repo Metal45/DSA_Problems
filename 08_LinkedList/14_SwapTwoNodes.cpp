@@ -23,7 +23,7 @@ Node *swapNodes(Node *head, int i, int j)
 		prev = temp;
 		temp = temp -> next;
 		pos++;
-	}
+	} 
 
 	// // swapping the nodes
 	// edge cases -> if either of the node is head node then p1 or p2 will be null throwing an error while 
