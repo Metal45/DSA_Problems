@@ -42,7 +42,6 @@ int partition2(int arr[], int s, int e){
     for(int i = s + 1; i <= e; i++){
         if(arr[i] <= pivot){
             count++;
-            
         }
     }
 
