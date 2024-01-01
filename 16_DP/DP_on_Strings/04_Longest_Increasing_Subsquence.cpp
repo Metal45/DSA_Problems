@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 class Solution {
 public:
     int solve(vector<int> &nums, int i, int prev, vector<vector<int>> &dp) {
@@ -78,11 +75,28 @@ public:
         return nextRow[0];        
     }
 
+    // LIS + Binary Seach -> O(nlogN)
+    int optimal(vector<int>& nums) {
+        vector<int> ans;
+        ans.push_back(nums[0]);
+        for(int i = 1; i < nums.size(); i++) {
+            if(nums[i] > ans.back()) {
+                ans.push_back(nums[i]);
+            }else {
+                int index = lower_bound(begin(ans), end(ans), nums[i]) - begin(ans);
+                ans[index] = nums[i];
+            }
+        }
+
+        return ans.size();
+    }
+
     int lengthOfLIS(vector<int>& nums) {
         // int n = nums.size();
         // vector<vector<int>> dp(n + 1, vector<int> (n + 1, -1));
         // int ans = solve(nums, 0, -1, dp);
         // return ans < 0 ? 0 : ans;
-        return spaceOptimised(nums);
+        //return spaceOptimised(nums);
+        return optimal(nums);
     }
 };
