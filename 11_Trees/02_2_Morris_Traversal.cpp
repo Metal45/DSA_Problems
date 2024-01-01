@@ -12,7 +12,7 @@ struct TreeNode {
  };
  
 // Morris Traversal does not use any extra space and does not use recursion
-// It uses the right pointer of the tree to store the inorder predecessor of the current node
+// It uses the right pointer of the tree to store the inorder sucessor of the current node
 // If the right pointer is NULL, then the it is pointed to the curr node to come back to it 
 // after traversing the left subtree of the curr node
 
