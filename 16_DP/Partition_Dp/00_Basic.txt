@@ -1,0 +1,16 @@
+1. How to know if the partition DP will be used in this question? 
+
+-> Whenever there are mutliple ways to solve the question, mutliple parts, 
+for example, 
+1 + 3 + 4 x 3, You can solve this in mutliple ways. One way to solve this is (1 + 3) + (4 x 3) another way
+would be (1 + 2 + 3) X 4. Both will yeild different answers so you can solve this question in multiple partitions.
+Here partition DP will be applied.
+
+2. You will be given a data structure and you will have to solve the questions by doing some partitions in the DS
+
+-> for example, [i     k    j]
+this is an array with starting point i and ending point j with a partition k in between at some index
+
+
+
+
